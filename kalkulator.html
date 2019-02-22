@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kalkulator Sederhana</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container {
+            width: 500px;
+            background-color: transparent;
+            margin: 0px 25%;
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn {
+            width: 80px;
+            font-weight: bold;
+            background-color: #c3c0c0;
+            border: 0px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #b29758;
+            margin-bottom: 30px;
+        }
+
+        #result {
+            text-align: right;
+            vertical-align: bottom;
+            font-size: 30px;
+        }
+
+        .nilai {
+            color: #c3c0c0;
+        }
+
+        html {
+            background-image: linear-gradient(#191c40 10%, #404472 80%);
+            background-attachment: fixed;
+        }
+    </style>
+    <script type="text/javascript" src="calculator.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Kalkulator JavaScript</h1>
+        <form>
+            <div class="row input-group mb-3">
+                <div class="col-3 nilai">Nilai 1</div>
+                <div class="col-9">
+                    <input type="number" id="operand1" value="0" class="form-control" oninput="validasi(this.id)">
+                </div>
+            </div>
+            <div class="row input-group mb-3">
+                <div class="col-3 nilai">Nilai 2</div>
+                <div class="col-9">
+                    <input type="number" id="operand2" value="0" class="form-control" oninput="validasi(this.id)">
+                </div>
+            </div>
+            <div class="row input-group mb-3">
+                <div class="col-3">
+                    <button id="add" class="btn btn-light" onclick="count(1)">+</button>
+                </div>
+                <div class="col-3">
+                    <button id="substract" class="btn btn-light" onclick="count(2)">-</button>
+                </div>
+                <div class="col-3">
+                    <button id="multiply" class="btn btn-light" onclick="count(3)">X</button>
+                </div>
+                <div class="col-3">
+                    <button id="divide" class="btn btn-light" onclick="count(4)">&#247;</button>
+                </div>
+            </div>
+            <div class="row input-group mb-3">
+                <div class="col-12">
+                    <input type="text" id="result" class="form-control" style="height: 100px;margin-bottom:1rem;">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
